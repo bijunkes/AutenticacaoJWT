@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 
 export default function Login() {
@@ -47,13 +48,13 @@ export default function Login() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
-                /> <br />
+                />
                 <input type="password"
                     placeholder="Senha"
                     value={senha}
                     onChange={(e) => setSenha(e.target.value)}
                     required
-                /> <bt />
+                />
                 <button type="submit">Entrar</button>
             </form>
 
@@ -62,12 +63,12 @@ export default function Login() {
                     <h4>Token JWT:</h4>
                     <pre style={{ whiteSpace: "pre-wrap" }}>{token}</pre>
 
-                    <button onClick={fetchProfile}>Buscar Perfil</button>
+                    <button onClick={fetchPerfil}>Buscar Perfil</button>
 
-                    {profile && (
+                    {perfil && (
                         <>
                             <h4>Perfil:</h4>
-                            <pre>{JSON.stringify(profile, null, 2)}</pre>
+                            <pre>{JSON.stringify(perfil, null, 2)}</pre>
                         </>
                     )}
                 </>
